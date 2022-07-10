@@ -19,7 +19,7 @@ while (entrada != "3") {
         switch (parseInt(entrada)) {
             case 1:
                 let costo = prompt("Ingrese el precio para calcular el IVA");
-                if (!isNaN(costo) && costo != null && costo != "") {
+                if (!isNaN(costo) && costo != null && costo != " ") {
                     let precioIva = parseFloat(calculoIva(costo));
                     let ivaP = parseInt(costo) + precioIva;
                     alert("El Precio con IVA del producto: es $ " + ivaP);
@@ -31,7 +31,7 @@ while (entrada != "3") {
 
                 case 2:
                     let costo1 = prompt("Ingrese el costo del producto para calcular el margen");
-                    if (!isNaN(costo1) && costo1 != null && costo1 != "") {
+                    if (!isNaN(costo1) && costo1 != null && costo1 != " ") {
                         let margen = prompt("Ingrese el margen de ganancia para calcular ");
                         if (!isNaN(margen) && margen != null && margen != "") {
                             let precioMargen = parseInt(costo1) + parseFloat(calculoMargen(costo1, margen));
