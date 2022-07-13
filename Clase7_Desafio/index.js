@@ -1,6 +1,6 @@
-// Se le muestra al cliente una lista de productos con sus precios
-// de los cuales debe ingresar el porcentaje de IVA de cada uno. 
-// Al final se mostrará la lista de artículos con la información completa
+// Objetivo, cargar un pedido de comida a partir de prompt
+// Simula una carta de restaurant y el usuario va eligiendo por categoria
+// Al final se mostrará el pedido con el total a pagar
 
 class Menu {
     constructor(id, nombre, precio, numero) {
@@ -16,6 +16,8 @@ class Menu {
         this.cantidad = this.cantidad + 1;
     }
 }
+
+// Inicializo el menú de la carta 
 const cartaMenu = [];
 cartaMenu.push(new Menu(1, "Ñoquis a la Bolognesa", 1200, 1));
 cartaMenu.push(new Menu(1, "Matambre al Verdeo", 2500, 2));
@@ -27,7 +29,7 @@ cartaMenu.push(new Menu(3, "Helado", 480, 7));
 cartaMenu.push(new Menu(3, "Flan con dulce", 350, 8));
 cartaMenu.push(new Menu(3, "Ensalada de Frutas", 500, 9));
 
-
+// Inicializo las variables a usar
 const pedidoCliente = [];
 let elPedido = "";
 let pasada1 = 0;
@@ -36,6 +38,7 @@ let pasada3 = 0;
 let i = 0;
 let entrada = "";
 
+// Ingreso por PROMPT 
 alert("Bienvenidos a la Carta del Menú para su cena");
 entrada = prompt("Ingrese una de las siguientes opciones para realizar su pedido: \n1.- Visualizar la carta completa  \n2.- Elegir el Plato principal \n3.- Elegir la Bebida \n4.- Elegir el Postre \n5.- Confirmar el pedido");
 
@@ -43,6 +46,7 @@ while (entrada != "5") {
     if (parseInt(entrada) >= 1 && parseInt(entrada) <= 4) {
         switch (parseInt(entrada)) {
             case 1:
+                // Muestra la carta completa al cliente con sus precios
                 for (const carta of cartaMenu) {
                     if (carta.id == 1){
                         if (pasada1 == 0){
@@ -73,6 +77,7 @@ while (entrada != "5") {
 
                     }
                 }
+                // Muestra la carta y vacío las variables para si vuelvo a entrar cargarlas nuevamente
                 alert(elPedido);
                 elPedido = "";
                 pasada1 = 0;
@@ -81,6 +86,7 @@ while (entrada != "5") {
                 break;
 
             case 2:
+                // Seleccion de la categoría 1 Plato Principal
                 const platoFiltro = cartaMenu.filter((elPlato) => elPlato.id == 1);
                 for (const platoPrincipal of platoFiltro){
                     elPedido += platoPrincipal.numero + ".- " + platoPrincipal.nombre + " - Precio: $ " + platoPrincipal.precio + "\n";
@@ -88,14 +94,17 @@ while (entrada != "5") {
                 let plato1 = prompt("Seleccione un plato de las siguientes opciones: \n" + elPedido);
                 if (platoFiltro.some((el) => el.numero == parseInt(plato1))) {
                     const ordena = platoFiltro.find((el) => el.numero == plato1 );
-                    pedidoCliente.push(ordena);
+                    if (orderna.cantidad == 0){
+                        pedidoCliente.push(ordena);
+                    }
                     for (const venta of platoFiltro) {
                         if(venta.numero == plato1){
                             venta.seleMenu()
                         }
                     }
                 }else{
-                    alert("Ingresaste una opción fuera del rango solicitado!\n Intente nuevamente !. Usted Ingreso: " + plato1);
+                    // Sino encontro una opción correcta vuelve al menú anterior
+                    alert("Ingresaste una opción fuera del rango solicitado!\n Intente nuevamente ! Usted Ingreso: " + plato1);
                     elPedido = "";
                     break;
                 }
