@@ -93,10 +93,10 @@ while (entrada != "5") {
                 }
                 let plato1 = prompt("Seleccione un plato de las siguientes opciones: \n" + elPedido);
                 if (platoFiltro.some((el) => el.numero == parseInt(plato1))) {
+                    
                     const ordena = platoFiltro.find((el) => el.numero == plato1 );
-                    if (orderna.cantidad == 0){
-                        pedidoCliente.push(ordena);
-                    }
+                    pedidoCliente.push(ordena);
+                    
                     for (const venta of platoFiltro) {
                         if(venta.numero == plato1){
                             venta.seleMenu()
