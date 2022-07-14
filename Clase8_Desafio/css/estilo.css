@@ -1,0 +1,12 @@
+body {
+    padding: 10px;
+    background-color: black;
+    background-image: url("../img/tasty-fresh-appetizing-italian-food-ingredients-on-dark-background-ready-to-cook-home-italian-healthy-food-cooking-concept-toning.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1, h2, h3 {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
