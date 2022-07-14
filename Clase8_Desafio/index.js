@@ -223,7 +223,7 @@ function pedidos(){
         contenedor.append(li);
 
         let saludoFin = document.getElementById("saludoFin");
-        saludoFin.innerHTML = "<h2> Disfrute de su pedido, Muchas Gracias!/h2>";
+        saludoFin.innerHTML = "<h2> Disfrute de su pedido, Muchas Gracias!</h2>";
 
     }else{
 
@@ -234,7 +234,7 @@ function pedidos(){
         contenedor.append(li);
 
         let saludoFin = document.getElementById("saludoFin");
-        saludoFin.innerHTML = "<h2> Hasta pronto, Muchas Gracias!/h2>";
+        saludoFin.innerHTML = "<h2> Hasta pronto, Muchas Gracias!</h2>";
     }
 
 }
