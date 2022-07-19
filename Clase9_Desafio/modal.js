@@ -1,4 +1,4 @@
-// Codigo javascript MODAL.JS
+// Codigo Para ver el carrito del pedido
 
 const modalContenedor = document.querySelector('.modal-container');
 
@@ -8,22 +8,21 @@ const cerrarCarrito = document.getElementById('cerrar')
 
 const modalCarrito = document.querySelector('.modal-carrito')
 
-
 // CLICK PARA ABRIR EL CARRITO - EN EL HEADER
-abrirCarrito.addEventListener('click', ()=>{
+abrirCarrito.addEventListener('click', () => {
     modalContenedor.classList.toggle('modal-active')
 })
 
 // CLICK BOTON CERRAR EN EL CARRITO - EN EL MODAL
-cerrarCarrito.addEventListener('click', ()=>{
+cerrarCarrito.addEventListener('click', () => {
     modalContenedor.classList.remove('modal-active')
 })
 
 // CLICK FUERA DEL MODAL PARA CERRAR MODAL
-modalContenedor.addEventListener('click',() =>{
+modalContenedor.addEventListener('click', () => {
     cerrarCarrito.click();
 })
 
-modalCarrito.addEventListener('click', (e) =>{
+modalCarrito.addEventListener('click', (e) => {
     e.stopPropagation();
 })

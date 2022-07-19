@@ -1,3 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
 body {
     padding: 10px;
     background-color: black;
@@ -12,11 +19,39 @@ h1, h2, h3 {
 }
 
 header {
+  background-color: black;
+  position: sticky;
   top: 0;
   border-bottom: #3f034b solid 2px;
   z-index: 100;
   height: 80px; }
 
+  
+#producto-contenedor {
+  display: grid;
+  margin: 90px auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+} 
+
+
+.card .card-image .card-title {
+  color: dodgerblue;
+  position: unset;
+}  
+
+.card{
+  margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 25px 0px;
+}
+
+.botonCarrito{
+border: 1px solid black;
+border-radius: 10px;
+padding: 2px;
+margin-left: 1%;
+}
 
 /* Modal */
 .modal-container {
@@ -24,7 +59,6 @@ header {
     display: flex;
     align-items: center;
     align-items: flex-start;
-  
     justify-content: center;
     position: fixed; 
     background-color: transparent;
@@ -51,6 +85,9 @@ header {
     border-color: black;
   }
   
+  .modal-carrito h3 {
+    background-color: black;
+  }
   
   .productoEnCarrito {
     border-left: 5px solid lightblue;

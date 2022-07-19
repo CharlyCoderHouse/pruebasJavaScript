@@ -1,3 +1,5 @@
+// INDEX comienzo del código JavaScript
+
 let bienvenida = document.getElementById("titulo");
 bienvenida.innerHTML = "<h1>Bienvenido a Comida como en Casa </h1>";
 

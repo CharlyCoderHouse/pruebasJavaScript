@@ -1,36 +1,35 @@
 
-// Codigo javascript APP.JS
-
+// Codigo para armar las Cards para el pedido
 
 import {
     cartaMenu
-} from './productos.js'
+} from "./productos.js";
+
 import {
     carritoIndex
 } from './carritoIndex.js';
 
-const mostrarProductos = (productos) => {
-    const contenedorProductos = document.getElementById('producto-contenedor');
+const mostrarProductos = (cartaMenu) => {
+    const contenedorPedido = document.getElementById('producto-contenedor');
 
-    productos.forEach(producto => {
+    cartaMenu.forEach(cartaMenu => {
         const div = document.createElement('div')
         div.classList.add('card')
         div.innerHTML += `<div class="card" style="width: 18rem;">
                             <img src="${cartaMenu.img}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">${cartaMenu.nombre}</h5>
-                                <p class="card-text">Descripción:  ${producto.desc}</p>
-                                <p class="card-text">Precio:$ ${producto.precio}</p>
-                                <button class="btn btn-primary" id=boton${producto.id}>Comprar</button>
+                                <p class="card-text">Descripción:  ${cartaMenu.desc}</p>
+                                <p class="card-text">Precio:$ ${cartaMenu.precio}</p>
+                                <button class="btn btn-primary" id=boton${cartaMenu.id}>Comprar</button>
                             </div>
                         </div>`
 
-        contenedorProductos.appendChild(div)
+        contenedorPedido.appendChild(div)
 
-        const boton = document.getElementById(`boton${producto.id}`)
+        const boton = document.getElementById(`boton${cartaMenu.id}`)
         boton.addEventListener('click', () => {
-            carritoIndex(producto.id);
-           // alert(`Se agrego ${producto.nombre}`);
+            carritoIndex(cartaMenu.id);
 
         })
 
@@ -38,6 +37,5 @@ const mostrarProductos = (productos) => {
 
 }
 
-
-mostrarProductos(productos)
+mostrarProductos(cartaMenu)
 
