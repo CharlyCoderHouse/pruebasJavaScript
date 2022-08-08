@@ -1,0 +1,12 @@
+[ 
+    {"id": 1, "nombre":"Ñoquis a la Bolognesa", "precio": 1200, "numero": 1, "cantidad": 0, "img": "img/noquispapa.jpg", "desc": "Ñoquis de papa con salsa de tomate, especias y carne"},
+    {"id": 2, "nombre": "Matambre al Verdeo", "precio": 2500, "numero": 1, "cantidad": 0, "img": "img/matambre_verdeo.jpg", "desc": "Matambre de cerdo con crema y cebolla de verdeo (con guarnición)"},
+    {"id": 3, "nombre": "Bife de Chorizo con papas españolas", "precio": 3500, "numero": 1, "cantidad": 0, "img": "img/bife_chorizo.jpg", "desc": "Bife de chorizo con cocción a gusto (con guarnición)"},
+    {"id": 4, "nombre": "Gaseosa", "precio": 500, "numero": 2, "cantidad": 0, "img": "img/gaseosa.jpg", "desc": "Gaseosas línea Coca-Cola"},
+    {"id": 5, "nombre": "Cerveza", "precio": 700, "numero": 2, "cantidad": 0, "img": "img/cervezas.jpg", "desc": "Cerveza Tirada Patagonia"},
+    {"id": 6, "nombre": "Vino", "precio": 900, "numero": 2, "cantidad": 0, "img": "img/Colon.jpg", "desc": "Vinos línea Colon"},
+    {"id": 7, "nombre": "Helado", "precio": 480, "numero": 3, "cantidad": 0, "img": "img/Helado.jpg", "desc": "Dos Bochas de Helado a elección"},
+    {"id": 8, "nombre": "Flan con dulce", "precio": 350, "numero": 3, "cantidad": 0, "img": "img/flan_dulce.png", "desc": "Flan con Dulce de leche o Crema"},
+    {"id": 9, "nombre": "Ensalada de Frutas", "precio": 500, "numero": 3, "cantidad": 0, "img": "img/fruta.jpg", "desc": "Frutas de estación con crema opcional"} 
+]
+
