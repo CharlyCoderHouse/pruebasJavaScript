@@ -1,9 +1,9 @@
 // Codigo para armar las Cards para el pedido
 
-import {cartaMenu} from "./productos.js";
+/* import {cartaMenu} from "./productos.js"; */
 import {carritoIndex} from './carritoIndex.js';
 
-const mostrarProductos = (cartaMenu) => {
+export const mostrarProductos = (cartaMenu) => {
     const contenedorPedido = document.getElementById('producto-contenedor');
 
     cartaMenu.forEach(cartaMenu => {
@@ -58,6 +58,6 @@ export function verificoStorage() {
 
 }
 
-mostrarProductos(cartaMenu);
+/* mostrarProductos(cartaMenu);
 
-verificoStorage();
+verificoStorage(); */
